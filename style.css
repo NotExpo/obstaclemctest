@@ -1,0 +1,324 @@
+@font-face {
+    font-family: 'MinecraftRegular';
+    src: url('Fonts/MinecraftRegular-Bmg3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: 'MinecraftRegular', Arial, sans-serif;
+    user-select: none;
+}
+body {
+    margin: 0;
+    animation: fadeInTop 0.5s ease;
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+}
+header {
+    background: rgb(50,50,50);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 10000;
+}
+#header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+#logo-text {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+#nav {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+#header-btn {
+    background: rgba(0,0,0,0.4);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+#header-btn:hover {
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgb(255,215,0);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+#header-btn:active {
+    background: rgba(0,0,0,0.8);
+    transform: scale(0.85);
+}
+
+/* Animations */
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Home Section */
+#home {
+    animation: fadeInTop 0.5s ease;
+}
+
+/* Maps Section */
+#maps {
+    width: 100vw;
+    height: 400px;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#maps--text{
+    font-size: 24px;
+    color: white;
+    margin-bottom: 5px;
+}
+#map-container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#map-item {
+    width: 300px;
+    height: 200px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+#map-item:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+#map-item:active {
+    transform: scale(0.90);
+    transition: all 0.2s ease;
+}
+#map-item img {
+    width: 300px;
+    height: 150px;
+    border-radius: 7.5px 7.5px 0px 0px;
+}
+#map-item-text-placeholder {
+    width: 300px;
+    height: 50px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#map-item-text-placeholder h2 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Shop */
+#shop {
+    width: 100vw;
+    min-height: 400px;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+#shop--text {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#shop-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+#shop-item {
+    width: 300px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+#shop-item:hover {
+    transform: scale(1.05);
+    border: 1.5px solid rgb(255,215,0);
+    transition: all 0.2s ease;
+}
+#shop-item:active {
+    transform: scale(0.90);
+    transition: all 0.2s ease;
+}
+#shop-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 7.5px 7.5px 0px 0px;
+}
+#shop-item-text-placeholder {
+    width: 300px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+#shop-item-text-placeholder h2 {
+    color: white;
+    font-size: 22px;
+    margin: 0 0 5px 0;
+}
+#shop-item-text-placeholder p {
+    color: rgb(255,215,0);
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Ranks Page */
+#ranks {
+    width: 100vw;
+    min-height: 400px;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    animation: fadeInTop 0.5s ease;
+}
+#ranks--text {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#rank-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+#ranks-rank-item {
+    width: 250px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+#ranks-rank-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 7.5px 7.5px 0px 0px;
+}
+#ranks-rank-item-text-placeholder {
+    width: 250px;
+    height: 720px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+#ranks-rank-item-text-placeholder h2 {
+    color: white;
+    font-size: 22px;
+    margin: 0 0 5px 0;
+}
+#ranks-rank-item-text-placeholder p {
+    color: rgb(255,215,0);
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+#buy-rank-btn {
+    background: rgb(255,215,0);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+#buy-rank-btn:hover {
+    background: rgb(255,200,0);
+    border: 1px solid rgb(255,215,0);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+#buy-rank-btn:active {
+    background: rgb(255,180,0);
+    transform: scale(0.85);
+    transition: all 0.2s ease;
+}
+
+/* Footer */
+footer {
+    background: rgb(50,50,50);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+}

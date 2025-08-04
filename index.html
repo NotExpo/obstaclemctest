@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obstacle MC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://yt3.googleusercontent.com/X830SnYvzuR-kQooDNWFdOdlfO___hW85TCbOsL2nMqYpgWT6ipI1xaiQY6NQkl2N0-XebkV3w=s160-c-k-c0x00ffffff-no-rj" type="image/x-icon">
+    <link rel="stylesheet" href="Fonts/MinecraftRegular-Bmg3.otf" type="font/otf" as="font" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body onload="load()">
+    <header>
+        <div id="header-container">
+            <div id="logo-container">
+                <img src="https://yt3.googleusercontent.com/X830SnYvzuR-kQooDNWFdOdlfO___hW85TCbOsL2nMqYpgWT6ipI1xaiQY6NQkl2N0-XebkV3w=s160-c-k-c0x00ffffff-no-rj" alt="Obstacle MC Logo" id="logo">
+                <span id="logo-text">Obstacle MC</span>
+            </div>
+            <nav>
+                <button id="header-btn" class="homeBtn" type="button">Home</button>
+                <button id="header-btn" class="playBtn" type="button">Play</button>
+                <button id="header-btn" class="loginBtn" type="button">Login</button>
+            </nav>
+        </div>
+    </header>
+    <div id="home">
+        <!-- Maps -->
+        <section id="maps">
+            <h1 id="maps--text"><i class="fa-solid fa-map"></i> Parkour Maps</h1>
+            <div id="map-container">
+                <div id="map-item">
+                    <img src="Images/Desert Run Map.png" alt="Map 1">
+                    <div id="map-item-text-placeholder">
+                        <h2>Desert Rush</h2>
+                    </div>
+                </div>
+                <div id="map-item">
+                    <img src="Images/Meltdown Map.png" alt="Map 2">
+                    <div id="map-item-text-placeholder">
+                        <h2>Meltdown</h2>
+                    </div>
+                </div>
+                <div id="map-item">
+                    <img src="Images/Jungle Run Map.png" alt="Map 3">
+                    <div id="map-item-text-placeholder">
+                        <h2>Jungle Run</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Shop -->
+        <section id="shop">
+            <h1 id="shop--text"><i class="fa-solid fa-shopping-cart"></i> Shop</h1>
+            <div id="shop-container">
+                <div id="shop-item">
+                    <img src="Images/VIP.png" alt="Item 1">
+                    <div id="shop-item-text-placeholder">
+                        <h2>VIP</h2>
+                        <p>Price: $5</p>
+                    </div>
+                </div>
+                <div id="shop-item">
+                    <img src="Images/VIP+.png" alt="Item 2">
+                    <div id="shop-item-text-placeholder">
+                        <h2>VIP+</h2>
+                        <p>Price: $10</p>
+                    </div>
+                </div>
+                <div id="shop-item">
+                    <img src="Images/MVP.png" alt="Item 3">
+                    <div id="shop-item-text-placeholder">
+                        <h2>MVP</h2>
+                        <p>Price: $25</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="ranks" style="display: none;">
+        <h1 id="ranks--text"><i class="fa-solid fa-trophy"></i> Ranks</h1>
+        <div id="rank-container">
+            <div id="ranks-rank-item">
+                <img src="Images/VIP.png" alt="Rank 1">
+                <div id="ranks-rank-item-text-placeholder">
+                    <h2>VIP</h2>
+                    <h2 style="color: yellow;">$5</h2>
+                    <p>* Extra maps<br>* new rank in Minecraft and discord<br>* Early access to maps<br>* VIP discord chat & voice<br>* bypass slow mode<br>* new lobby and discounts<br>* 1 particle effect 1 particle active at a time<br>* particles<br>* nickname change<br>* currency - 500 XP<br>* access hard+</p>
+                    <button id="buy-rank-btn" onclick="buyRank('VIP')">Buy Rank</button>
+                </div>
+            </div>
+            <div id="ranks-rank-item">
+                <img src="Images/VIP+.png" alt="Rank 2">
+                <div id="ranks-rank-item-text-placeholder">
+                    <h2>VIP+</h2>
+                    <h2 style="color: yellow;">$10</h2>
+                    <p>* Extra maps<br>* new rank in Minecraft and discord<br>* Early access to maps<br>* VIP discord chat & voice<br>* Early access to new games<br>* bypass slow mode<br>* new lobby and discount<br>* 2 particle effects<br>* nickname change<br>* 2 particles active at a time<br>* glow effect<br>* /particles - /glow<br>* 5000 XP<br>* infinite ender pearls<br>* server priority<br>* access to 2 difficulties<br>* hard+<br>* Extreme</p>
+                    <button id="buy-rank-btn" onclick="buyRank('VIP+')">Buy Rank</button>
+                </div>
+            </div>
+            <div id="ranks-rank-item">
+                <img src="Images/MVP.png" alt="Rank 3">
+                <div id="ranks-rank-item-text-placeholder">
+                    <h2>MVP</h2>
+                    <h2 style="color: yellow;">$25</h2>
+                    <p>* Extra maps<br>* new rank in Minecraft and discord<br>* Early access to maps<br>* VIP discord chat & voice<br>* Early access to new games<br>* bypass slow mode<br>* new lobby and discount<br>* 4 particle effects<br>* nickname change<br>* 2 particles active at a time<br>* glow effect<br>* /particles - /glow<br>* 10,000 XP<br>* infinite ender pearls<br>* knockback X stick<br>* server priority<br>* 3 potions of swiftness<br>* 3 potions of jump boost<br>* ability to make your own custom map<br>* access to 3 difficulties<br>* hard+<br>* Extreme<br>* Absurd</p>
+                    <button id="buy-rank-btn" onclick="buyRank('MVP')">Buy Rank</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Obstacle MC. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
